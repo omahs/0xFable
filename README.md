@@ -31,8 +31,10 @@ To deploy and try out the app locally:
 (cd packages/webapp && make dev)
 
 # main shell
-(cd packages/contracts && make build) # not necessary if you did make build at top level
-(cd packages/contracts && make deploy-local)
+cd packages/contracts
+cp .env.example .env # deployer key = first preloaded anvil account
+make build # not necessary if you did make build at top level
+make deploy-local
 ```
 
 The app is now running on http://localhost:8080/
