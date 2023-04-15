@@ -30,7 +30,7 @@ template Draw(levels) {
     checkRemoveLeaf.tailIndex <== deckTailCardIndex;
     checkRemoveLeaf.tailHashPath <== deckTailCardHashPath;
 
-    component checkAppendToTail = CheckAppendToTail(levels);
+    component checkAppendToTail = CheckAppendToLeaves(levels);
     checkAppendToTail.root <== handRoot;
     checkAppendToTail.newRoot <== newHandRoot;
     checkAppendToTail.appendLeaf <== drawnCardLeaf;
